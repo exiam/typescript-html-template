@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   entry: './src/index.ts',
   module: {
     rules: [
